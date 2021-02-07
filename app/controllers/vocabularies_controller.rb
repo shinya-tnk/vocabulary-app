@@ -27,6 +27,12 @@ class VocabulariesController < ApplicationController
     redirect_to '/users/show'
   end
 
+  def destroy
+    vocabulary = Vocabulary.find(params[:id])
+    vocabulary.destroy
+    redirect_to '/users/show'
+  end
+
 
   private
 
