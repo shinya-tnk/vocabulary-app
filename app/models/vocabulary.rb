@@ -8,4 +8,11 @@ class Vocabulary < ApplicationRecord
     validates :description1
   end
 
+  def self.search(search)
+    if search != ''
+      Vocabulary.where('word LIKE(?)', "%#{search}%")
+    else
+      Vocabulary.where(user_id: 0)
+    end
+  end
 end

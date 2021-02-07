@@ -33,6 +33,9 @@ class VocabulariesController < ApplicationController
     redirect_to '/users/show'
   end
 
+  def search
+    @vocabularies = Vocabulary.search(params[:keyword]).page(params[:page]).per(8)
+  end
 
   private
 
