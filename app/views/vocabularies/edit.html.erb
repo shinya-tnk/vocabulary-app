@@ -1,0 +1,39 @@
+<div class=container>
+  <div class=block>
+    <%= form_with model: @vocabulary, class: "edit-new-voc", local: true do |f| %>
+    <div class="message">
+      <%= render 'shared/error_messages', model: f.object %>
+    </div>
+      <div class="new-word">
+        <%= f.label :word, autofocus: true %><br />
+        <%= f.text_field :word %>
+      </div>
+
+      <div class="mean">
+        <%= f.label :description1 %><br />
+        <%= f.text_field :description1 %>
+      </div>
+      <div class="mean">
+        <%= f.label :description2 %><br />
+        <%= f.text_field :description2 %>
+      </div>
+      <div class="mean">
+        <%= f.label :description3 %><br />
+        <%= f.text_field :description3 %>
+      </div>
+      <div class="mean">
+        <%= f.label :description4 %><br />
+        <%= f.text_field :description4 %>
+      </div>
+      <div class="mean">
+        <%= f.label :description5 %><br />
+        <%= f.text_field :description5 %>
+      </div>
+      <div class="btn">
+      <%= f.submit '変更する', id: "edit-voc-btn" %>
+    <% end %>
+    <%= link_to "削除", vocabulary_path, method: :delete, class: "delete-btn" %>
+      </div>
+    <%= link_to 'もどる', root_path %>
+  </div>
+</div>

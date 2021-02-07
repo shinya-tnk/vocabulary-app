@@ -1,0 +1,27 @@
+#edit-voc-btn {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.delete-btn {
+  border: 1px solid black;
+  text-decoration: none;
+  color: white;
+  background: red;
+  font-weight: bold;
+  margin-left: 20px;
+  line-height: 44px;
+  padding: 0 20px;
+  border-radius: 8px;
+}
+
+.delete-btn:hover {
+  color: black;
+  
+}
+
+.btn {
+  display: flex;
+  cursor: auto;
+}

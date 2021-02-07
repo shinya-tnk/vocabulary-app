@@ -17,6 +17,16 @@ class VocabulariesController < ApplicationController
     end
   end
 
+  def edit
+    @vocabulary = Vocabulary.find(params[:id])
+  end
+
+  def update
+    vocabulary = Vocabulary.find(params[:id])
+    vocabulary.update(vocabulary_params)
+    redirect_to '/users/show'
+  end
+
 
   private
 
