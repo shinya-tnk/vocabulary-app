@@ -1,0 +1,49 @@
+
+.sign-up {
+  max-width: 680px;
+  margin: 10vh auto;
+}
+
+.sign-up-header {
+  text-align: center;
+}
+
+.registration-main {
+  margin-top: 40px;
+  border-radius: 6px;
+}
+
+
+.input-default {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  border: 0;
+  outline: 0;
+  resize: none;
+  font-size: 16px;
+}
+
+#nickname {
+  height: 64px
+}
+
+
+.register-btn {
+  margin: 10px 0 0 68px;
+  border-radius: 8px;
+  display: block;
+  width: 80%;
+  padding: 20px;
+  -webkit-appearance: none;
+  outline: 0;
+  border: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: #ABA194;
+}
+
+.register-btn:hover {
+  filter: brightness(80%);
+}
