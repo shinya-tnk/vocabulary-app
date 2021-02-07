@@ -2,6 +2,13 @@
 ja:
   activerecord:
     attributes:
+      vocabulary:
+        word: 英単語
+        description1: 意味①
+        description2: 意味②
+        description3: 意味③
+        description4: 意味④
+        description5: 意味⑤
       user:
         nickname: ニックネーム
         email: メールアドレス
