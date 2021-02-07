@@ -1,0 +1,18 @@
+<%= form_with(url: search_vocabularies_path, local: true, method: :get, class: "search-form") do |f| %>
+  <%= f.text_field :keyword, placeholder: "単語を検索", id: "search-input" %>
+  <%= f.submit "検索", id: "search-btn" %>
+<% end %>
+<div class="contents row">
+  <% @vocabularies.each do |voc| %>
+    <%= link_to edit_vocabulary_path(voc.id) do %>
+    <div class="card">
+      <span><%= voc.word %></span><br />
+      <span>意味①:<%= voc.description1 %></span><br />
+      <span>意味②:<%= voc.description2 %></span><br />
+      <span>意味③:<%= voc.description3 %></span><br />
+      <span>意味④:<%= voc.description4 %></span><br />
+      <span>意味⑤:<%= voc.description5 %></span>
+    </div>
+    <% end %>
+  <% end %>
+</div>

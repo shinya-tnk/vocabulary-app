@@ -1,0 +1,66 @@
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  overflow: scroll;
+}
+
+.contents a {
+  width: 22vw;
+  padding: 0;
+  height: 35vh;
+  margin: 20px;
+  box-shadow: 7px 5px 5px rgb(180, 180, 180);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.card {
+  background-color: rgb(250, 250, 250);
+  padding: 10px;
+  width: 22vw;
+  height: 35vh;
+}
+
+.card:hover {
+  background-color: rgb(171, 243, 243);
+}
+
+.card > span:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 35px;
+}
+
+.card > span:not(:first-child) {
+  font-size: 1.1rem;
+}
+
+.pagination {
+  padding-left: 20px;
+}
+
+.search-form {
+  margin: 10px 0 0 20px;
+}
+
+#search-input {
+  padding: 5px;
+  width: 20%;
+  border: 1px solid lightgray;
+}
+
+#search-btn {
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+#search-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.sort {
+  display: flex;
+}

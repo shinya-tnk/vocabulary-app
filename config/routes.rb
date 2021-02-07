@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   root to: 'vocabularies#index'
   resources :vocabularies
+  resources :users, only: :show
 end
