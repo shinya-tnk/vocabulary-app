@@ -1,0 +1,21 @@
+[debug] [2021-01-16T15:01:28.856Z] ----------------------------------------------------------------------
+[debug] [2021-01-16T15:01:28.858Z] Command:       /Users/tanakashinya/.nodebrew/node/v14.15.4/bin/node /usr/local/bin/firebase auth:import users.json --debug --hash-algo=BCRYPT --hash-key=93b1add997936f4c65b79eae9cfc551c29b0af4a55b2f6915696b260ed9ec5530540184146935dae574f0f453b7d9807d518457a2219056f52c67d45c89437d2
+[debug] [2021-01-16T15:01:28.858Z] CLI Version:   9.2.1
+[debug] [2021-01-16T15:01:28.858Z] Platform:      darwin
+[debug] [2021-01-16T15:01:28.858Z] Node Version:  v14.15.4
+[debug] [2021-01-16T15:01:28.859Z] Time:          Sun Jan 17 2021 00:01:28 GMT+0900 (日本標準時)
+[debug] [2021-01-16T15:01:28.859Z] ----------------------------------------------------------------------
+[debug] [2021-01-16T15:01:28.859Z] 
+[debug] [2021-01-16T15:01:28.864Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-16T15:01:28.865Z] > authorizing via signed-in user
+[debug] [2021-01-16T15:01:28.866Z] [iam] checking project vocapp-ccb1a for permissions ["firebase.projects.get","firebaseauth.users.create","firebaseauth.users.update"]
+[debug] [2021-01-16T15:01:28.869Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vocapp-ccb1a:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebaseauth.users.create","firebaseauth.users.update"]}
+[debug] [2021-01-16T15:01:29.803Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Jan 2021 15:01:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=677","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-16T15:01:29.932Z] Error: ENOENT: no such file or directory, stat 'users.json'
+    at Object.statSync (fs.js:1086:3)
+    at Command.actionFn (/usr/local/Cellar/firebase-cli/9.2.1/libexec/lib/node_modules/firebase-tools/lib/commands/auth-import.js:41:20)
+    at /usr/local/Cellar/firebase-cli/9.2.1/libexec/lib/node_modules/firebase-tools/lib/command.js:163:25
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.

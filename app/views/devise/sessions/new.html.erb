@@ -27,4 +27,16 @@
       <% end %>
     <div>
 
+    <div class="sns-login">
+      <%= link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: "google-login" do %>
+        <img src="https://img.icons8.com/fluent/20/000000/google-logo.png"/>
+        Sign In using Google
+      <% end %>
+      <%= link_to user_facebook_omniauth_authorize_path, method: :post, class: "fb-login" do %>
+        <img src="https://img.icons8.com/color/20/000000/facebook-new.png"/>
+        Sign In using Facebook
+      <% end %>
+    </div>
+
+
 </div>
