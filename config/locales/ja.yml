@@ -1,0 +1,28 @@
+---
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用パスワード
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              format: '%{attribute}%{message}'
+              invalid: を正しく入力してください
+              taken: はすでに使用されています
+            password:
+              format: '%{attribute}%{message}'
+              invalid: は6文字以上英数字を含んだものを設定してください
+            password_confirmation:
+              format: '%{attribute}%{message}'
+              confirmation: がパスワードと一致していません
+        vocabulary:
+          attributes:
+            word:
+              format: '%{attribute}%{message}'
+              invalid: はアルファベットで入力してください
