@@ -63,5 +63,17 @@ gem 'rails-i18n'
 
 gem 'dotenv-rails', require: 'dotenv/rails-now'
 
+gem 'omniauth-google-oauth2'
+
+gem 'omniauth', '~> 2.0.0'
+
+gem 'omniauth-rails_csrf_protection'
+
+gem 'omniauth-facebook'
+
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+gem 'pry-rails'
+
+gem 'kaminari'
