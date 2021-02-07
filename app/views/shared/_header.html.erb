@@ -1,0 +1,11 @@
+<header class="header">
+  <div class="header-bar">
+    <%= button_to "Vocapp", root_path, method: :get, id: "home-btn" %>
+    <% if user_signed_in? %>
+      <div class="profile" id="profile">
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "sign-out-btn" %>
+        <p class="nickname"><%= current_user.nickname %></p>
+      </div>
+    <% end %>
+  </div>
+</header>
