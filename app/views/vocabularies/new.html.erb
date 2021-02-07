@@ -1,0 +1,42 @@
+<div class=container>
+  <div class=block>
+    <%= form_with model: @vocabulary, url: vocabularies_path, method: :post, class: "regi-new-voc", local: true do |f| %>
+    <div class="message">
+      <%= render 'shared/error_messages', model: f.object %>
+      <% if flash.alert.present? %>
+        <p id="alert"><%= flash[:alert] %></p>
+      <% end %>
+    </div>
+      <div class="new-word">
+        <%= f.label :word, autofocus: true %><span>（必須）</span><br />
+        <%= f.text_field :word %>
+      </div>
+
+      <div class="mean">
+        <%= f.label :description1 %><span>（必須）</span><br />
+        <%= f.text_field :description1 %>
+      </div>
+      <div class="mean">
+        <%= f.label :description2 %><br />
+        <%= f.text_field :description2 %>
+      </div>
+      <div class="mean">
+        <%= f.label :description3 %><br />
+        <%= f.text_field :description3 %>
+      </div>
+      <div class="mean">
+        <%= f.label :description4 %><br />
+        <%= f.text_field :description4 %>
+      </div>
+      <div class="mean">
+        <%= f.label :description5 %><br />
+        <%= f.text_field :description5 %>
+      </div>
+
+      <%= f.submit '登録する', id: "regi-voc-btn" %>
+
+    <% end %>
+
+    <%= button_to "もどる", root_path, method: :get, id: "back-btn" %>
+  </div>
+</div>
