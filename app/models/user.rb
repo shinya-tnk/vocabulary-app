@@ -2,7 +2,8 @@ class User < ApplicationRecord
   has_many :sns_credentials
   has_many :vocabularies
 
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook google_oauth2]
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :omniauthable,
+         omniauth_providers: %i[facebook google_oauth2]
 
   def self.from_omniauth(auth)
     # 以前にSNSログインしたことがあればそれを検索して取得
