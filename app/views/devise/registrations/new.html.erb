@@ -1,0 +1,27 @@
+<div class="sign-up">
+  <div class="sign-up-header">
+    <h1 class="sign-up-title">Sign Up</h1>
+  </div>
+
+    <div class='form-wrap'>
+      <%= form_with model: @user, url: user_registration_path, class: 'session-main', local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
+        <div class="form-group">
+          <%= f.text_area :nickname, class:"input-default", id:"nickname", placeholder:"Nickname", maxlength:"20", autofocus: true %>
+        </div>
+        <div class="form-group">
+          <%= f.email_field :email, class:"input-default", id:"email", placeholder:"Email", autofocus: true %>
+        </div>
+
+        <% if @sns_id.present? %>
+          <%= hidden_field_tag :sns_auth, true %>
+        <% else %>
+          <div class="form-group">
+            <%= f.password_field :password, class:"input-default", id:"password", placeholder:"Password( Minimum is 6 characters with Alphabet and Numbers )", minlength:"6", autofocus: true %>
+          </div>
+          <div class="form-group">
+            <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"Confirm your password", autofocus: true %>
+          </div>
+        <% end %>
+          <%= f.submit "Sign Up" ,class:"register-btn" %>
+      <% end %>
