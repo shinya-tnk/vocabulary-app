@@ -77,3 +77,5 @@ gem 'devise-i18n-views'
 gem 'pry-rails'
 
 gem 'kaminari'
+
+gem 'audiojs-rails'

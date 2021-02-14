@@ -17,4 +17,6 @@
     <%= render "shared/header" %>
     <%= yield %>
   </body>
+    <%= audio_tag("correct.mp3", id: "correct") %>
+    <%= audio_tag("incorrect.mp3", id: "incorrect") %>
 </html>

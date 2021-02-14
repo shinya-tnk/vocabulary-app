@@ -12,6 +12,9 @@ function test() {
   const $title = document.getElementById('title');
   const $appExplanation = document.getElementById('app-explanation');
   const $replay = document.getElementById('replay');
+  const correctAudio = document.querySelector("#correct")
+  const incorrectAudio = document.querySelector("#incorrect")
+  
 
 
   $startStudy.addEventListener('click', () => {
@@ -72,9 +75,15 @@ function test() {
   setWord();
   document.addEventListener('keydown', e => {
     if (e.key !== $word[index].textContent[loc]) {
+      incorrectAudio.pause();
+      incorrectAudio.currentTime = 0;
+      incorrectAudio.play();
       mistake++;
       return
     }
+    correctAudio.pause();
+    correctAudio.currentTime = 0;
+    correctAudio.play();
     loc++;
     $target[index].textContent = $word[index].textContent.substring(0, loc) + '_'.repeat($word[index].textContent.length - loc);
     
@@ -83,8 +92,11 @@ function test() {
       proceed();
     }
   });
-
+  
   $hintbtn.addEventListener('click', () => {
+    correctAudio.pause();
+    correctAudio.currentTime = 0;
+    correctAudio.play();
     loc++;
     hintCount++;
     $target[index].textContent = $word[index].textContent.substring(0, loc) + '_'.repeat($word[index].textContent.length - loc);

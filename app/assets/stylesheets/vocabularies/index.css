@@ -249,9 +249,9 @@ p[name="target"] {
   text-decoration: none;
 }
 
-#home_btn {
+.home_btn {
   position: absolute;
-  top: 680px;
+  top: 650px;
   left: 50px;
   text-decoration: none;
   color: white;
@@ -264,7 +264,7 @@ p[name="target"] {
 
 #hint_btn {
   position: absolute;
-  top: 680px;
+  top: 650px;
   right: 50px;
   background-color: lightblue;
   padding: 10px;

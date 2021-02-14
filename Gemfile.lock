@@ -71,6 +71,8 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
+    audiojs-rails (1.0.1)
+      railties (>= 3.1)
     bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.7.1)
@@ -329,6 +331,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  audiojs-rails
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
