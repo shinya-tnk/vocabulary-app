@@ -40,7 +40,6 @@ class VocabulariesController < ApplicationController
   private
 
   def vocabulary_params
-    params.require(:vocabulary).permit(:word, :description1, :description2, :description3, :description4,
-                                       :description5).merge(user_id: current_user.id)
+    params.require(:vocabulary).permit(:word, :description1, :description2, :description3, :description4, :description5).merge(user_id: current_user.id)
   end
 end
