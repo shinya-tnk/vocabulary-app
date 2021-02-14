@@ -1,7 +1,11 @@
-<%= form_with(url: search_vocabularies_path, local: true, method: :get, class: "search-form") do |f| %>
-  <%= f.text_field :keyword, placeholder: "単語を検索", id: "search-input" %>
-  <%= f.submit "検索", id: "search-btn" %>
-<% end %>
+<div class="container2">
+  <%= form_with(url: search_vocabularies_path, local: true, method: :get, class: "search-form") do |f| %>
+    <%= f.text_field :keyword, placeholder: "単語を検索", id: "search-input" %>
+    <%= f.submit "検索", id: "search-btn" %>
+  <% end %>
+<%= button_to "クリア", "/users/show", method: :get, id: "back-btn" %>
+<%= button_to "ホーム", root_path, method: :get, id: "back-btn" %>
+</div>
 <div class="contents row">
   <% @vocabularies.each do |voc| %>
     <%= link_to edit_vocabulary_path(voc.id) do %>
