@@ -60,12 +60,13 @@
 
     </div>
       <section id="modal" class="hidden">
+      <div class="hidden" id="circle">◯</div>
         <% @vocabularies.each do |voc| %>
           <p name="description" class="hidden"><%= voc.description1 %><br /><%= voc.description2 %><br /><%= voc.description3 %><br /><%= voc.description4 %><br /><%= voc.description5 %></p>
           <p name="word" class="hidden"><%= voc.word %></p>
           <p name="target"></p>
         <% end %>
-        <input type="button" value="ホームへ戻る" onClick="document.location.reload(true)" class="home_btn">
+        <input type="button" value="ホームへ戻る" onClick="document.location.reload(true)" id="home_btn">
         <input type="button" value="ヒント" id="hint_btn">
         <section id="result" class="hidden">
           <p id="finish">Finished!!</p>

@@ -11,10 +11,14 @@ function test() {
   const $hintbtn = document.getElementById('hint_btn');
   const $title = document.getElementById('title');
   const $appExplanation = document.getElementById('app-explanation');
+  const $circle = document.getElementById('circle');
   const $replay = document.getElementById('replay');
   const correctAudio = document.querySelector("#correct")
-  const incorrectAudio = document.querySelector("#incorrect")
-  
+  var incorrectAudio = document.querySelector("#incorrect")
+  var Pinpon = document.getElementById('pinpon');
+  Pinpon.volume = 0.1;
+  incorrectAudio.volume = 0.1;
+  let audioactive = false;
 
 
   $startStudy.addEventListener('click', () => {
@@ -22,6 +26,7 @@ function test() {
     $title.classList.add('hidden');
     $startStudy.classList.add('hidden');
     $appExplanation.classList.add('hidden');
+    audioactive = true;
   });
   
   index = 0;
@@ -65,6 +70,7 @@ function test() {
         $hintCount.innerText = "ヒントボタンを押した回数：" + hintCount + "回";
         return
       }
+      $circle.classList.add('hidden');
       setWord();
     }, 1200);
   }
@@ -74,17 +80,48 @@ function test() {
   let hintCount = 0;
   setWord();
   document.addEventListener('keydown', e => {
-    if (e.key !== $word[index].textContent[loc]) {
-      incorrectAudio.pause();
-      incorrectAudio.currentTime = 0;
-      incorrectAudio.play();
-      mistake++;
-      return
+    if (audioactive === true) {
+      
+      if (e.key !== $word[index].textContent[loc]) {
+        
+        incorrectAudio.play();
+        window.setTimeout(function () {
+          incorrectAudio.pause();
+          incorrectAudio.currentTime = 0;
+          
+        }, 100);
+        mistake++;
+        return
+      }
+      correctAudio.play();
+      window.setTimeout(function () {
+        correctAudio.pause();
+        correctAudio.currentTime = 0;
+        
+      }, 100);
+      
+      loc++;
+      $target[index].textContent = $word[index].textContent.substring(0, loc) + '_'.repeat($word[index].textContent.length - loc);
+      
+      if (loc === $word[index].textContent.length) {
+        speech();
+        $circle.classList.remove('hidden');
+        pinpon.play();
+        proceed();
+      }
     }
-    correctAudio.pause();
-    correctAudio.currentTime = 0;
-    correctAudio.play();
+  });
+  
+  $hintbtn.addEventListener('click', () => {
+      correctAudio.play();
+      window.setTimeout(function () {
+        correctAudio.pause();
+        correctAudio.currentTime = 0;
+        
+      }, 100);
+      
     loc++;
+    hintCount++;
     $target[index].textContent = $word[index].textContent.substring(0, loc) + '_'.repeat($word[index].textContent.length - loc);
     
     if (loc === $word[index].textContent.length) {
@@ -92,20 +129,8 @@ function test() {
       proceed();
     }
   });
-  
-  $hintbtn.addEventListener('click', () => {
-    correctAudio.pause();
-    correctAudio.currentTime = 0;
-    correctAudio.play();
-    loc++;
-    hintCount++;
-    $target[index].textContent = $word[index].textContent.substring(0, loc) + '_'.repeat($word[index].textContent.length - loc);
 
-    if (loc === $word[index].textContent.length) {
-      speech();
-      proceed();
-    }
-  });
+  
 } 
 
 window.addEventListener('load', test);
