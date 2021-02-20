@@ -19,6 +19,6 @@ if (errorMessage !== null) {
   mask.classList.remove('hidden');
   errorMessage.style.opacity = 1;
   mask.style.opacity = 1;
-  setTimeout(fadeOutErrorMessage, 2000);
+  setTimeout(fadeOutErrorMessage, 1000);
 };
 })
