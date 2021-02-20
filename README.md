@@ -5,7 +5,7 @@ Vocapp
 中・上級者向けの英単語のタイピングゲームです
 
 ## URL
-未実装
+https://vocapp4upper-learners.herokuapp.com/
 
 ## テスト用アカウント
 email: hoge@sample.com
