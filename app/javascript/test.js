@@ -63,6 +63,7 @@ function test() {
       if($word.length === 0) {
         $homebtn.remove();
         $hintbtn.remove();
+        $circle.classList.add('hidden');
         $result.classList.remove('hidden');
         const $miss = document.getElementById('miss');
         const $hintCount = document.getElementById('hint-count');
