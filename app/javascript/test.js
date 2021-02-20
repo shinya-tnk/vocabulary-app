@@ -46,7 +46,7 @@ function test() {
     const text = $word[index].textContent;
     const uttr = new SpeechSynthesisUtterance(text);
     uttr.lang = 'en-US';
-    uttr.rate = 0.9;
+    uttr.rate = 1;
     const voice = speechSynthesis.getVoices().find(function(voice){
       return voice.name === 'Google US English';
     })
