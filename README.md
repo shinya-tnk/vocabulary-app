@@ -31,7 +31,22 @@ Googleアカウント、Facebookアカウントからでもサインインでき
 
 
 ## 実装した機能についてのGIFと説明
-未実装
+
+### ユーザー機能
+![sign-in-using-facebook](https://user-images.githubusercontent.com/70380308/108625056-08fd6600-748c-11eb-9c66-3268c57d7026.gif)
+![sign-in-using-google](https://user-images.githubusercontent.com/70380308/108625073-26cacb00-748c-11eb-91c5-29c7d349a798.gif)
+
+### 単語新規登録、登録単語一覧表示
+![new](https://user-images.githubusercontent.com/70380308/108625027-e66b4d00-748b-11eb-91b8-aff6f824fb5e.gif)
+### 単語編集機能
+![edit](https://user-images.githubusercontent.com/70380308/108625006-c76cbb00-748b-11eb-9d9f-38e796bad46e.gif)
+### 単語削除機能
+![delete](https://user-images.githubusercontent.com/70380308/108624995-b2902780-748b-11eb-8029-1ed81b8cd61d.gif)
+### 単語検索機能
+![search](https://user-images.githubusercontent.com/70380308/108625041-faaf4a00-748b-11eb-868d-74d631a4a7ce.gif)
+
+### タイピング機能
+![app](https://user-images.githubusercontent.com/70380308/108625092-406c1280-748c-11eb-9c0b-67976281ecf2.gif)
 
 ## 実装予定の機能
 間違えた問題の復習
