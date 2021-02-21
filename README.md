@@ -35,15 +35,22 @@ Googleアカウント、Facebookアカウントからでもサインインでき
 ### ユーザー機能
 ![sign-in-using-facebook](https://user-images.githubusercontent.com/70380308/108625056-08fd6600-748c-11eb-9c66-3268c57d7026.gif)
 ![sign-in-using-google](https://user-images.githubusercontent.com/70380308/108625073-26cacb00-748c-11eb-91c5-29c7d349a798.gif)
+- Googleアカウント、Facebookアカウントでのサインアップ、サインインが可能
 
 ### 単語新規登録、登録単語一覧表示
 ![new](https://user-images.githubusercontent.com/70380308/108625027-e66b4d00-748b-11eb-91b8-aff6f824fb5e.gif)
+
+- ユーザー毎にオリジナル単語帳が作成できるようにするため
+- 自分で登録した単語を確認するため
 ### 単語編集機能
 ![edit](https://user-images.githubusercontent.com/70380308/108625006-c76cbb00-748b-11eb-9d9f-38e796bad46e.gif)
+- 誤登録したり単語の意味を追加するため
 ### 単語削除機能
 ![delete](https://user-images.githubusercontent.com/70380308/108624995-b2902780-748b-11eb-8029-1ed81b8cd61d.gif)
+- 学習不要になった単語を削除するため
 ### 単語検索機能
 ![search](https://user-images.githubusercontent.com/70380308/108625041-faaf4a00-748b-11eb-868d-74d631a4a7ce.gif)
+- 効率よく単語の編集・削除をするため
 
 ### タイピング機能
 ![app](https://user-images.githubusercontent.com/70380308/108625092-406c1280-748c-11eb-9c0b-67976281ecf2.gif)
